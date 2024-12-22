@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>spotify-to-plex</Name>
+  <Repository>jjdenhertog/spotify-to-plex:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/jjdenhertog/spotify-to-plex</Project>
+  <Overview>A beautiful web application that you can use to sync your Spotify playlists with Plex. This application uses the data from Spotify (playlists or albums) and tries to find all the matching songs in Plex. With every playlists it gives you an overview of the songs that have been matched and how they have been matched.&#xD;
+&#xD;
+It's important to also setup an encryption key. This should be a random string. It is used to encrypt any sensitive data that we receive from Spotify. To get a random key, open Unraid terminal and type in the below. Put the generated key in ENCRYPTION_KEY variable&#xD;
+&#xD;
+openssl rand -hex 32&#xD;
+&#xD;
+Please read the project page for how to configure Spotify and Tidal Developement accounts.</Overview>
+  <Category>MediaApp:Music</Category>
+  <WebUI>http://[IP]:[PORT:9030]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/jjdenhertog/spotify-to-plex/blob/012a2e8e14197f2bfac50969bbd1d1bac07179e6/misc/logo.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1734879074</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="9030" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
+  <Config Name="SPOTIFY_API_CLIENT_ID" Target="SPOTIFY_API_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SPOTIFY_API_CLIENT_SECRET" Target="SPOTIFY_API_CLIENT_SECRET" Default="" Mode="" Description="PASTE_YOUR_SPOTIFY_CLIENT_SECRET_HERE " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SPOTIFY_API_REDIRECT_URI" Target="SPOTIFY_API_REDIRECT_URI" Default="" Mode="" Description="http://[IP_OF_SPOTIFY_TO_PLEX]:9030/api/spotify/token" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ENCRYPTION_KEY" Target="ENCRYPTION_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TIDAL_API_CLIENT_ID" Target="TIDAL_API_CLIENT_ID" Default="" Mode="" Description="PASTE_YOUR_TIDAL_CLIENT_ID_HERE " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TIDAL_API_CLIENT_SECRET" Target="TIDAL_API_CLIENT_SECRET" Default="" Mode="" Description="PASTE_YOUR_TIDAL_CLIENT_SECRET_HERE " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TIDAL_API_REDIRECT_URI" Target="TIDAL_API_REDIRECT_URI" Default="" Mode="" Description="http://[IP_OF_SPOTIFY_TO_PLEX]:3000/api/tidal/token " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="path to appdata" Target="/app/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/spotify-to-plex/</Config>
+  <TailscaleStateDir/>
+</Container>
