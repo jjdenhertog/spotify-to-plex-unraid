@@ -24,8 +24,8 @@ Please read the project page for how to configure Spotify and Tidal Developement
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1734879074</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you appreciate my work, consider starring the repository or making a donation to support ongoing development. Your support means the world to me — thank you!</DonateText>
+  <DonateLink>https://buymeacoffee.com/jjdenhertog</DonateLink>
   <Requires/>
   <Config Name="WebUI" Target="9030" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
   <Config Name="SPOTIFY_API_CLIENT_ID" Target="SPOTIFY_API_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
